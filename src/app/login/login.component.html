@@ -1,0 +1,18 @@
+<div class="col-sm-6">
+    <form style="width:22rem" #loginForm="ngForm" (ngSubmit)="signInWithEmail(loginForm)">
+      <p class="h5 text-center mb-4">Sign in</p>
+
+     </form>
+  </div>
+
+
+<div class="container">
+  <div>
+    User Name : <input type="text" name="username" [(ngModel)]="username">
+    Password : <input type="password" name="password" [(ngModel)]="password">
+  </div>
+  <button (click)=checkLogin() class="btn btn-success">
+    Login
+  </button>
+  
+</div>

@@ -1,0 +1,41 @@
+<div class="md-form">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+</div>
+<ul *ngFor="let data of OrderList | filter: searchText">
+  <li>{{data.isActive}}</li>
+  <li>{{data.order_menu}}
+</ul>
+
+<h3 class="text-secondary">Order List </h3>
+<div id="list-parent">
+
+  <div class="list-group" *ngFor="let order of OrderList">  
+    <a href="#productCollapse{{order.id}}" data-toggle="collapse" class="list-group-item">{{order.order_menu}}</a>
+    <div class="collapse" id="productCollapse{{order.id}}">
+      <div class="card card-body" data-parent="list-parent">
+       <img src="/assets/images/dish-a.png">  
+       <i class="fa fa-shopping-cart"></i>
+       <img src="/assets/images/shopping-cart.png">
+       
+        <h6 class="display-4 text-info m-auto">ORDER MENU: {{order.order_menu}}</h6>        
+        <h6 class="display-4 text-secondary m-auto">Order Amount: {{order.order_amount}}</h6>
+        <h6 class="display-4 text-success m-auto">Address : {{order.address}}</h6>  
+           
+       
+        <div class="list-group list-group-horizontal">                        
+          <a [routerLink]="['/edit-order',order.DELIVERYORDER_ID]" class="text-warning list-group-item">edit</a>          
+          <a [routerLink]="[]" (click)="deleteOrder(order.DELIVERYORDER_ID, order.ORDER_MENU)" class="text-danger list-group-item">delete</a>          
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>

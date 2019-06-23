@@ -1,0 +1,31 @@
+<div class="container-fluid" *ngIf="selectedorder">
+  {{editOrder.value | json}}
+  <h4 *ngIf="submitted" class="text-info text">{{order_MENU?.value}} has been edited successfull.</h4>
+  <h2>Edit  a Order</h2>
+  <!-- <h4 *ngIf="submitted" class="text-success text">{{product_NAME.value}} has been submitted successfull.</h4> -->
+  <form [formGroup]="editOrder" (ngSubmit)="onSubmit()">
+    <!-- {{insertProduct.value | json}} -->
+    
+    <div class="form-group">
+      <label for="order_MENU" >Order MENU:</label>
+      <input required type="text" name="order_MENU" formControlName="order_MENU" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="order_AMOUNT">order Amount:</label>
+      <input required type="number" name="order_AMOUNT" formControlName="order_AMOUNT" class="form-control">
+    </div>    
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input required type="text" name="address" formControlName="address" class="form-control">
+    </div>
+    <!--<div class="form-group">
+      <label for="product_DESCRIPTION">Description:</label>
+      <textarea required class="form-control" rows="5" formControlName="product_DESCRIPTION"></textarea>
+    </div>--> 
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck" formControlName="order_ID">
+      <label class="custom-control-label" for="order_ID">{{selectedorder.order_ID}}</label>
+    </div>
+    <button [disabled]="editOrder.invalid && editOrder" class="btn btn-warning my-2" type="submit">Edit Order</button>
+  </form>
+</div>

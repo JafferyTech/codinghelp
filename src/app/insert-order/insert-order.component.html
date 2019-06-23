@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <h2>Entering a order</h2>
+  <h4 *ngIf="submitted" class="text-success text">{{order_Menu.value}} has been submitted successfull.</h4>
+  <form [formGroup]="insertOrder" (ngSubmit)="onSubmit()">
+    {{insertOrder.value | json}}
+    <div class="form-group">
+      <label for="order_Menu"> order  Menu:</label>
+      <input required type="text" name="order_Menu" formControlName="order_Menu" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="order_Amount">Order Amount:</label>
+      <input required type="number" name="order_Amount" formControlName="order_Amount" class="form-control">
+    </div>    
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input required type="text" name="address" formControlName="address" class="form-control">
+    </div>
+     
+    <div class="form-group">
+        <select formControlName="order_id" class="custom-select" name="order_id" [class.is-invalid]="(hasError && order_id.touched)" (change)="validateType(order_id.value)">
+        <option  value="default" selected>Select a order Type</option>
+        <option *ngFor="let type of orderMenu" value={{type.order_id}}>{{type.order_Menu}}</option>        
+        </select>
+        <small class="text-danger" *ngIf="hasError && order_id.touched">Please choose an appropriete order.</small> 
+      </div>
+    <button [disabled]="insertOrder.invalid" class="btn btn-primary" type="submit">Insert Order</button>
+  </form>
+</div>
