@@ -1,0 +1,266 @@
+body{
+    background-image: url(assets/gallery/office-581131_1920.jpg);
+    background-repeat: no-repeat;
+}
+.block{
+    position: fixed;
+}
+
+/*----------Login page--------*/
+
+
+
+.image{
+    float: left;
+    height: 80px;
+    width:180px;
+    margin-top: 40px;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    margin-top: 40px;
+    
+}
+.heading{
+    font-size: 18px;
+    text-align: left;
+}
+ .background-form{
+    background:rgba(0,0,0,0.7);
+    height: 300px;
+    width:425px;
+    margin-left: 450px;
+    margin-top: 90px;
+    padding:30px;
+     color: white;
+     border-radius: 18px;
+}
+  .form-control {
+    width: 300px;
+    height: 30px;
+    border: 0;
+    padding-left: 1rem;
+    margin-left: 25px;
+    margin-right: auto;
+    margin-bottom: 10px;      
+    color: gray;
+    border-radius: 2px;
+    background-color: lemonchiffon;
+}
+.form-control:hover{
+    background-color: white;
+}
+.login{
+    width: 100px;
+    height: 50px;
+    margin-left: 300px;
+    margin-top: 30px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+}
+.login:hover{
+    color: black;
+    background-color: white;
+}
+.footer{
+    color: grey;
+
+}
+.footer:hover{
+    color: white;
+}
+
+/*----------login page ends here--------*/
+
+/*---------header section in home page----*/
+
+
+
+.header ul li{
+    list-style-type: none;
+    display:inline-block;
+    text-align: center;
+    margin-left: 100px;
+    font-size: 18px;
+    color:white;
+   /*margin-top: 5px;*/
+
+}
+li  a:hover {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+}
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-top: 18px;
+}
+
+
+
+/*====== home ========*/
+
+#services{
+    width: 1200px;
+    height:600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.service{
+    width: 280px;
+    height: 500px;
+    float: left;
+    margin-left: 20px;
+}
+#img{
+   margin-left: 10px;
+   
+}
+#wordpress{
+    color: black;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#wordpress h2{
+    color: #fff;
+    text-align: center;
+}
+#wordpress p{
+    font-size: 20px;
+    color: white;
+}
+.learn{
+    padding: 10px;
+    background: #33C1CF;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-left: 70px;
+    display: block;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family:serif;
+}
+.learn:hover{
+    background: #eee;
+}
+
+
+
+/*-------ADD NEW EMPLOYEEE-----*/
+
+
+ #background-form{
+    background:rgba(0,0,0,0.7);
+    height: 500px;
+    width:450px;
+    margin-left: 450px;
+    margin-top: 90px;
+    padding:30px;
+     color: white;
+     border-radius: 18px;
+}
+  #form-control {
+    width: 300px;
+    height: 30px;
+    border: 0;
+    padding-left: 1rem;
+    margin-left: 25px;
+    margin-right: 15px;    
+    margin-bottom: 10px;      
+    color: gray;
+    border-radius: 2px;
+    background-color: lemonchiffon;
+}
+#form-control:hover{
+    background-color: white;
+}
+
+
+
+
+/*------------contact------*/
+
+.section{
+
+    height: 370px;
+    margin-left: 10px;
+    margin-top: 10Px;
+}
+.section h3{
+    padding: 10px;
+    margin-left: 50px;
+    color: darkgray;
+}
+.section h3:hover{
+    
+    color: white;
+}
+.section h1{
+    color: aliceblue;
+}
+.section p{
+    font-size: 22px;
+   color:darkgray;
+}
+.section p:hover{
+    
+    color: white;
+}
+.section img{
+    margin-left: 10px;
+    float: left;
+}
+
+.social{
+    opacity: 0.7;
+    
+    
+}
+.social:hover{
+    opacity: 1;
+    cursor: pointer;
+       
+}
+.clear{
+    clear: both;
+}
+
+
+
+
+
+
+
+
+/*-----------Employee list here-----*/
+textarea{
+    color: gray;
+    font-size: 20px;
+    background-color: lemonchiffon;
+    height: 500px;
+    width: 450px;
+}
+textarea:hover{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
